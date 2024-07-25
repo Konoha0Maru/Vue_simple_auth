@@ -10,10 +10,10 @@
         <v-col lg="4" md="6" sm="8" xs="12">
             <v-tabs fixed-tabs bg-color="indigo-darken-2" v-model="tab">
                 <v-tab value="signin" @click="clear">
-                    <h2>ورود</h2>
+                    <h2>Signin</h2>
                 </v-tab>
                 <v-tab value="signup" @click="clear">
-                    <h2>ثبت نام</h2>
+                    <h2>Signup</h2>
                 </v-tab>
             </v-tabs>
             <v-card class="mx-auto px-6 py-8" variant="tonal">
@@ -21,41 +21,41 @@
                     <v-window-item value="signin">
                         <v-form v-model="form" @submit.prevent="signIn" dir="ltr">
                             <v-text-field class="mb-2" v-model="username" :readonly="loading" :rules="[required]"
-                                clearable label="نام کاربری"></v-text-field>
+                                clearable label="Username"></v-text-field>
 
                             <v-text-field v-model="password" :readonly="loading"
                                 :append-inner-icon="showPass ? 'mdi-eye' : 'mdi-eye-off'"
                                 :type="showPass ? 'text' : 'password'" @click:append-inner="showPass = !showPass"
-                                :rules="[required]" clearable label="رمز عبور"
-                                placeholder="رمز عبور را وارد نمائید"></v-text-field>
+                                :rules="[required]" clearable label="password"
+                                placeholder="Enter the password"></v-text-field>
 
                             <br>
 
                             <v-btn :loading="loading" block color="indigo-darken-2" size="large" type="submit"
                                 variant="elevated">
-                                <strong>ورود</strong>
+                                <strong>Login</strong>
                             </v-btn>
                         </v-form>
                     </v-window-item>
                     <v-window-item value="signup">
                         <v-form v-model="form" @submit.prevent="signUp" dir="ltr">
                             <v-text-field class="mb-2" v-model="username" :readonly="loading" :rules="[required]"
-                                clearable label="نام کاربری"></v-text-field>
+                                clearable label="User name"></v-text-field>
 
                             <v-text-field class="mb-2" v-model="email" :readonly="loading" :rules="[required]" clearable
-                                label="ایمیل"></v-text-field>
+                                label="Email"></v-text-field>
 
                             <v-text-field v-model="password" :readonly="loading"
                                 :append-inner-icon="showPass ? 'mdi-eye' : 'mdi-eye-off'"
                                 :type="showPass ? 'text' : 'password'" @click:append-inner="showPass = !showPass"
-                                :rules="[required]" clearable label="رمز عبور"
-                                placeholder="رمز عبور را وارد نمائید"></v-text-field>
+                                :rules="[required]" clearable label="Password"
+                                placeholder="please enter the password"></v-text-field>
 
                             <br>
 
                             <v-btn :loading="loading" block color="indigo-darken-2" size="large" type="submit"
                                 variant="elevated">
-                                <strong>ثبت نام</strong>
+                                <strong>signup</strong>
                             </v-btn>
                         </v-form>
                     </v-window-item>
@@ -121,7 +121,7 @@ const signUp = async () => {
 }
 
 const required = (value) => {
-    return !!value || 'اطلاعات این فیلد الزامی است'
+    return !!value || 'This is necessary.'
 }
 
 </script>

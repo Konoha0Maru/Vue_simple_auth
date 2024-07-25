@@ -33,7 +33,7 @@ const { logged } = storeToRefs(useAuthStore())
 
 
 const title = computed(() => {
-  return localStorage.getItem("username") ?? "ناحیه کاربری"
+  return localStorage.getItem("username") ?? "User"
 })
 
 const theme = ref('dark')
