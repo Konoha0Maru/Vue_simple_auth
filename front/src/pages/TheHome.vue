@@ -1,5 +1,5 @@
 <template>
-    <h1 class="text-center">صفحه اصلی</h1>
+    <h1 class="text-center">Main Page</h1>
 </template>
 
 <script setup>
